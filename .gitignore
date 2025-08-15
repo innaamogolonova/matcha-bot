@@ -1,0 +1,16 @@
+# Ignore Gmail & API secrets
+client_secret.json
+token.json
+config.json
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore local logs
+*.log
+
+# Ignore OS-specific junk
+.DS_Store
+Thumbs.db
