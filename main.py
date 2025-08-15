@@ -84,13 +84,6 @@ def check_availability(url: str) -> bool:
         if any(p in text for p in PHRASE_LIST):
             return False
 
-        # 3) Disabled “Add to cart” buttons
-        add_btn = soup.find(lambda t: t.name in ("button", "input") and
-                                      ("add to cart" in (t.get_text(" ").casefold() if t.name=="button" else (t.get("value","").casefold()))))
-        if add_btn:
-            if add_btn.has_attr("disabled") or add_btn.get("aria-disabled") == "true":
-                return False
-
         # If nothing screams “sold out”, assume not available only if we saw no cart cues.
         # Optional: be conservative and default to False.
         return False
