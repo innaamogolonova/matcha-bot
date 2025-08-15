@@ -3,4 +3,5 @@ Checks if a certain product (Ikuyo matcha) is available on the online website (h
 
 ## TODO: 
 - change to run more often
-- change to not use GHA
+- change to not use GHA -> use local server
+- switch to telegram (or other app) instead of gmail to send notifications 
